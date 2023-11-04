@@ -8,7 +8,7 @@
 
 body {
   margin: auto;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway',  Arial, sans-serif;
   width: 1440px;
 }
 
@@ -16,7 +16,6 @@ header {
   position: relative;
   margin: 92px 50px;
   width: calc(100% - 100px);
-  height: 109px;
   padding: 0px;
   box-sizing: border-box;
   display: flex;
@@ -42,12 +41,12 @@ header ul {
   width: 388px;
   height: 23px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style-image: url('../images/list_marker.svg');
 }
 
 header ul li { 
-  padding: 0 px;
+  padding: 0px;
 }
 
 header ul li:first-child a {
@@ -57,16 +56,25 @@ header ul li:first-child a {
   border-bottom: none;
 }
 
-header img {
-  position: absolute;
-  top: auto;
-  left: 597px;
+header img{
+  display: flex;
+  margin-right: 150px;
   width: 148px;
   height: 105px;
+  flex-shrink: 0;
 }
 
-.header_license {
-  margin-right: 20px;
+.license {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  color: #000;
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 5px;
 }
 
 a {
@@ -79,23 +87,20 @@ a {
 .preview-container {
   position: relative;
   width: 1440px;
-  height: 757px;
+  min-height: 757px;
   background-image: url(../images/cover.jpg);
   background-size: cover;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .preview-container__content {
+  position: absolute;
   padding-left: 50px;
   padding-right: 50px;
-  position: absolute;
   width: 1440px;
-  height: 355px;
-  flex-shrink: 0;
   box-sizing: border-box;
-  padding-top: 165px;
-  z-index: 1;
-  text-transform: uppercase;  
+  padding-top: 165px;  
 }
 
 .overlay {
@@ -103,9 +108,9 @@ a {
   left: 0;
   top: 0;
   width: 100%;
-  weight: 100%;
+  height: 100%;
   opacity: 0.6;
-  bottom: #000;
+  background-color: #000;
 }
 
 .preview-container h2 {
@@ -113,8 +118,12 @@ a {
   font-size: 100px;
   font-style: normal;
   font-weight: 700;
-  letter-spacing: 30px;
-  text-align: center;   
+  text-align: center; 
+  letter-spacing: 30px;  
+}
+
+.letter-spacing{
+  letter-spacing: 60px;
 }
   
 .preview-container h2:first-child {
@@ -131,7 +140,7 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: end;
-  margin-left: 370px;
+  margin-left: auto;
 }
 
 .cover {
@@ -145,7 +154,7 @@ a {
   width: 633px;
   color: #FFF;
   text-align: left;
-  font-family: 'Raleway';
+  font-family: 'Raleway', Arial, sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -160,7 +169,7 @@ a {
   border: 1px solid #FFF;
   color: #FFF;
   text-align: center;
-  font-family: Raleway;
+  font-family: "Raleway", Arial, sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -171,7 +180,6 @@ a {
 .lots {
   margin-top: 180px;
   width: 100%;
-  height: 579px;
   flex-shrink: 0;
   padding: 0 50px;
   box-sizing: border-box;
@@ -181,7 +189,7 @@ a {
   margin: 30px 0 0 40px;
   display: inline-block;
   color: #000;
-  font-family: Raleway;
+  font-family: "Raleway", Arial, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -191,7 +199,7 @@ a {
 .lots__heading {
   padding-left: 40px;
   color: #000;
-  font-family: Raleway;
+  font-family: "Raleway", Arial, sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -213,7 +221,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   width: 430px;
-  height: 450px;
+  min-height: 450px;
   padding: 50px 40px;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -230,7 +238,7 @@ a {
 
 .lots__cards-list__card h3 {
   color: #fff;
-  font-family: 'Raleway';
+  font-family: 'Raleway', Arial, sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
@@ -241,7 +249,7 @@ a {
 
 .lots__cards-list__card p {
   color: #fff;
-  font-family: 'Raleway';
+  font-family: 'Raleway', Arial, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -271,7 +279,7 @@ a {
 
 .about__content h2 {
   color: #000;
-  font-family: Raleway;
+  font-family: "Raleway", Arial, sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -282,7 +290,7 @@ a {
 .about__content p {
   padding-top: 100px;
   color: #000;
-  font-family: Raleway;
+  font-family: "Raleway", Arial, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -321,10 +329,12 @@ footer ul li:first-child a {
   border-bottom: none;
 }
 
-.footer_license {
-  color: #000;
-  font-family: Raleway;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
+.footer_image{
+  height: 50px;
+  margin-right: 50px;
+}
+
+.license_footer{
+  padding-left: 50px;
+  padding-top: 10px;
 }
