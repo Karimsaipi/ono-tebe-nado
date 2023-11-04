@@ -1,2 +1,3 @@
 
-https://github.com/Karimsaipi/ono-tebe-nado.git
+https://github.com/Karimsaipi/ono-tebe-nado
+
