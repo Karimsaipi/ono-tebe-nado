@@ -63,23 +63,21 @@ header img{
   flex-shrink: 0;
 }
 
-.license {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #000;
-  font-family: "Raleway", Arial, sans-serif;
+.address {
   font-size: 18px;
+  max-width: 240px;
   font-style: normal;
-  font-weight: 400;
-  padding-top: 5px;
+  line-height: 1.35em;
 }
 
-a {
-  width: fit-content;
-  padding-bottom: 1px;
-  border-bottom: 1px solid #000000;
+.address__link {
+  color: #000;
   text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.header__address {
+  justify-self: right;
 }
 
 .cover {
@@ -164,6 +162,7 @@ a {
   line-height: 28px;
   vertical-align: bottom;
   word-spacing: 17px;
+  padding-bottom: 10px;
 }
 
 .preview-container__footer_btn {
@@ -228,15 +227,18 @@ a {
   min-height: 450px;
   padding: 50px 40px;
   box-sizing: border-box;
-  flex-shrink: 0;
-  background: url(../images/card-lot-01.jpg);
   background-size: cover;
 }
- .lots__cards-list__card:nth-child(2) {
+
+.film-card {
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+ .book-card {
   background-image: url(../images/card-lot-02.jpg);
 }
 
-  .lots__cards-list__card:nth-child(3) {
+  .picture-card {
   background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -260,7 +262,6 @@ a {
   z-index: 1;
 }
 
-
 .about {
   margin-top: 181px;
   width: 100%;
@@ -268,16 +269,16 @@ a {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .about img {
   margin-left: 95px;
-  position: absolute;
 }
 
 .about__content {
   padding-top: 100px;
-  padding-left: 455px;
+  padding-left: 120px;
   box-sizing: border-box;
 }
 
@@ -307,23 +308,26 @@ a {
 
 .footer {
   margin-top: 180px;
+  margin-left: 50px;
   padding-bottom: 90px;
-  width: 100%;
+  width: calc(100%-50px);
   flex-shrink: 0;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
 }
 
-.footer a,
- footer ul li {
+.footer ul li {
+  text-align: center;
+  list-style-type: none;
+}
+
+.footer a {
   color: #000;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  text-align: center;
-  list-style-type: none;
 }
 
 footer ul li:first-child a {
